@@ -45,4 +45,6 @@ Git 提交使用账号专属 noreply 地址 `186058058+YifanLiu-AI@users.noreply
 
 已部署到 777-hk2：源码 `/opt/github-garden`，工作区 `/var/lib/github-garden/repo`。365 天基础记录已生成并推送，GitHub API 验收 365/365 天均非零。systemd timer 已启用，每天北京时间 20:10 执行；服务 smoke 为 Result=success、ExecMainStatus=0，重复新增 0 条。专用写入 deploy key 只对本仓库有效，GitHub SSH host key 从官方 meta API 固定；不复制个人私钥或 GitHub token。
 
-用户追加要求颜色扰动，现已增加固定种子的数量变化；完整色阶补齐验收待本轮更新。
+用户追加要求颜色扰动，现已增加固定种子的数量变化。本轮额外追加 946 条并推送，合成记录总计 1311 条；不删除、不重写初始 365 条历史。VPS 验收原 HEAD 仍为祖先，原 days 文件完全未变，工作区干净；更新后的每日服务再次执行成功且新增 0 条。
+
+GitHub API 已确认过去 365 天全部非零，色阶分布为第一档 206 天、第二档 121 天、第三档 20 天、第四档 18 天。原先的均匀浅绿已变为四档深浅变化。每日日志与实际生成时间仍保留自动生成标记。
