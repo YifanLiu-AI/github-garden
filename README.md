@@ -15,10 +15,10 @@
 
 ## 运行方式（仓库及 VPS 尚未部署）
 
-先创建明确说明用途的专用仓库，例如：
+在本地脚本目录创建明确说明用途的专用仓库，并推送 main 分支：
 
 ```sh
-gh repo create YifanLiu-AI/github-garden --public --description 'Explicitly synthetic contribution garden; not genuine development activity'
+gh repo create YifanLiu-AI/github-garden --public --description 'Explicitly synthetic contribution garden; not genuine development activity' --source . --remote origin --push
 ```
 
 VPS 需要 Python 3、Git，以及仅对此仓库有写权限的独立 deploy key。不要复制本机 gh token 或个人 SSH 私钥到服务器。
