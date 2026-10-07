@@ -1,0 +1,14 @@
+[Unit]
+Description=Explicitly synthetic GitHub contribution garden
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/github-garden
+ExecStart=/usr/bin/python3 /opt/github-garden/garden.py --worktree /var/lib/github-garden/repo
+Environment=GIT_TERMINAL_PROMPT=0
+UMask=0077
+TimeoutStartSec=120
+NoNewPrivileges=true
+PrivateTmp=true

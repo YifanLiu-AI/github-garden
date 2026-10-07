@@ -1,0 +1,10 @@
+[Unit]
+Description=Daily synthetic contribution garden
+
+[Timer]
+OnCalendar=*-*-* 20:10:00 Asia/Shanghai
+Persistent=true
+Unit=github-garden.service
+
+[Install]
+WantedBy=timers.target
