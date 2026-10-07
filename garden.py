@@ -80,7 +80,10 @@ def main():
                         help="1 for daily run; 365 for one-off historical fill")
     parser.add_argument("--no-push", action="store_true", help="offline test only")
     args = parser.parse_args()
-    dates(args.days, dt.datetime.now(TZ).date())
+    try:
+        dates(args.days, dt.datetime.now(TZ).date())
+    except ValueError as exc:
+        parser.error(str(exc))
     if not (args.worktree / ".git").is_dir():
         parser.error("The dedicated repository must already be cloned")
     with (args.worktree / ".git" / "garden.lock").open("a") as lock:
